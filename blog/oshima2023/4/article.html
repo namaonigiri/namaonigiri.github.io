@@ -1,0 +1,165 @@
+<!--
+    ・css
+    ・ヘッダ画像
+    ・ホームリンク
+    ・作品トップリンク
+    ・イラストリンク
+    ・ゲームリンク
+    ・ブログトップリンク
+    を適宜変更する．
+-->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" href = "../../css/blogstyle.css" type = "text/css">
+    <title>
+        Macroculus spp.
+    </title>
+</head>
+<header class="top" style="background-image: url('../../../image/header.png');">
+    <a href="../../../index.html" aria-label="ホームへ">
+        <!-- リンクの中にテキストや他の要素が必要な場合はここに記述 -->
+        <!-- aria-labelは、リンクの目的を視覚的に示さない時のための補助 -->
+    </a>
+</header>
+<div class = "menubar">
+    <ul class="ddmenu">
+        <li><a href = "../../../project/index.html">作品</a>
+            <ul>
+                <li><a href = "../../../project/graphic/article.html">イラスト</a></li>
+                <li><a href = "../../../project/game/game.html">ゲーム</a></li>
+                <li><a href = "../../../project/tool/article.html">ツール</a></li>
+            </ul>
+        </li>
+        <li><a href = "../../index.html">ブログ</a></li>
+    </ul>
+</div>
+
+<body data-article-id="4" number-of-article = "4">
+    <div class = "content">
+        <div class = "content-title">伊豆大島遠征2023.8.29-9.2 4,5日目</div>
+
+        <p class = "indent">
+            9月に入り，伊豆大島滞在最終日．オオヒョウタンのトラップを回収し，ノコギリの採集に向かう．初日より大きい個体は結局最後まで得られなかった．イズミヤマもスカ．そんなわけでほぼ写真がない．昼食のためにラーメン屋に向かうが完売．
+        </p>
+        <p class = "indent">
+            結局，入湯を予定していた「愛ランドセンター 御神火温泉」で食べることにした．
+        </p>
+
+        <div class = "image-container">
+            <img src = "./image/hiyasi.jpg" class = "content-img-yoko">
+            <p>明日葉冷やし中華</p>
+        </div>
+
+        <p class = "indent">
+            腹を満たした後は温泉で疲れを癒す．採集後の湯舟は至福だ．ほぼ貸し切りだったため，思う存分楽しむことができた．お土産も購入し，ジェットフォイルに乗り込む．浮いているだけあって(?)航行中のコードが飛行機のようだった．寝ていたらいつの間にか竹芝桟橋に着いていた．速いね．
+        </p>
+
+        <div class = "image-container">
+            <img src = "./image/jet.jpg" class = "content-img-yoko">
+            <p>ジェットフォイル</p>
+        </div>
+
+        <p class = "indent">
+            K君とはここでお別れ．ありがとう！
+        </p>
+        <p class = "indent">
+            ここからはボーナスタイムだ．アキバでオタク顔になった後，インターンで東京に来ているやつと飲みに行く．
+        </p>
+        <p class = "indent">
+            カプセルホテルで泥になった翌日，のんのんびよりの聖地巡礼に立ち上がる．午前3時のことである．
+        </p>
+
+        <div class = "image-container">
+            <img src = "./image/station.jpg" class = "content-img-yoko">
+            <p>下里分校最寄り．ここから結構歩いた</p>
+        </div>
+
+        <div class = "image-container">
+            <img src = "./image/inaka.jpg" class = "content-img-yoko">
+            <p>田舎なのん？</p>
+        </div>
+
+        <p class = "indent">
+            さほどド田舎というわけでもなく，ほどよく整備された町が続く．
+        </p>
+        <p class = "indent">
+            途中，小川ではしゃぎながら進む．
+        </p>
+
+        <div class = "image-container">
+            <img src = "./image/ogawa.jpg" class = "content-img-tate">
+            <p>小川町の......小川</p>
+        </div>
+
+        <div class = "image-container">
+            <img src = "./image/haguro.jpg" class = "content-img-yoko">
+            <p>ハグロトンボ</p>
+        </div>
+
+        <p class = "indent">
+            以下，下里分校のダイジェストである．
+        </p>
+
+        <div class = "image-container">
+            <img src = "./image/sign.jpg" class = "content-img-yoko">
+            <img src = "./image/map.jpg" class = "content-img-yoko">
+            <img src = "./image/kotei.jpg" class = "content-img-yoko">
+            <img src = "./image/kosha.jpg" class = "content-img-yoko">
+            <img src = "./image/blackboard.jpg" class = "content-img-yoko">
+            <p>現在教室に入るには，ツアーに参加する必要があるらしい</p>
+        </div>
+
+        <p class = "indent">
+            のどかでいいところだった．のんのんびよりを観ていると確かに癒されるのだが，一方で彼方に行ってしまった安らぎの日々を思い出して少し悲しくなるのは私だけだろうか．小川町を後にした私は，行きと同じく18きっぷでせわしなく帰路についた．いつの日か，安らぎが訪れることを願って......
+        </p>
+        <p class = "indent">
+            伊豆大島遠征2023　完
+        </p>
+
+
+
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const currentArticleId = parseInt(document.body.getAttribute('data-article-id'), 10);
+            const n = parseInt(document.body.getAttribute('number-of-article'), 10);
+            const previousArticleId = currentArticleId - 1;
+            const nextArticleId = currentArticleId + 1;
+
+            const linkContainer = document.createElement('div');
+            linkContainer.className = 'link-container';
+
+            if (nextArticleId <= n){
+                const nextLink = document.createElement('a');
+                nextLink.href = `../${nextArticleId}/article.html`;
+                nextLink.innerText = '次へ';
+                nextLink.className = 'next-link';
+                linkContainer.appendChild(nextLink);
+            }
+            else{
+                const nextLink = document.createElement('a');
+                nextLink.href = `../../index.html`;
+                nextLink.innerText = 'ブログトップに戻る';
+                nextLink.className = 'next-link';
+                linkContainer.appendChild(nextLink);
+            }
+
+            if (previousArticleId > 0) {
+                const prevLink = document.createElement('a');
+                prevLink.href = `../${previousArticleId}/article.html`;
+                prevLink.innerText = '前へ';
+                prevLink.className = 'prev-link';
+                linkContainer.appendChild(prevLink);
+            }
+
+        document.body.appendChild(linkContainer);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!--
+    ・css
+    ・ヘッダ画像
+    ・ホームリンク
+    ・作品トップリンク
+    ・イラストリンク
+    ・ゲームリンク
+    ・ブログトップリンク
+    を適宜変更する．
+-->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" href = "../../css/blogstyle.css" type = "text/css">
+    <title>
+        Macroculus spp.
+    </title>
+</head>
+<header class="top" style="background-image: url('../../../image/header.png');">
+    <a href="../../../index.html" aria-label="ホームへ">
+        <!-- リンクの中にテキストや他の要素が必要な場合はここに記述 -->
+        <!-- aria-labelは、リンクの目的を視覚的に示さない時のための補助 -->
+    </a>
+</header>
+<div class = "menubar">
+    <ul class="ddmenu">
+        <li><a href = "../../../project/index.html">作品</a>
+            <ul>
+                <li><a href = "../../../project/graphic/article.html">イラスト</a></li>
+                <li><a href = "../../../project/game/game.html">ゲーム</a></li>
+                <li><a href = "../../../project/tool/article.html">ツール</a></li>
+            </ul>
+        </li>
+        <li><a href = "../../index.html">ブログ</a></li>
+    </ul>
+</div>
+
+<body data-article-id="3" number-of-article = "4">
+
+    <div class = "content">
+        <div class = "content-title">伊豆大島遠征2023.8.29-9.2 3日目</div>
+
+        <p class = "indent">
+            ドライバーのK君は睡眠中．私はというと，宿から歩ける範囲で採集することにした．その見当は何となくつけてある．
+        </p>
+
+        <div class = "image-container">
+            <img src = "./image/nokogiris.jpg" class = "content-img-tate">
+            <p>このように，たくさん見られる．楽しい</p>
+        </div>
+
+        <div class = "image-container">
+            <img src = "./image/nokogiri.jpg" class = "content-img-tate">
+            <p>湾曲が強い個体</p>
+        </div>
+
+        <p class = "indent">
+            採集中，度々スズメバチに襲われていたのだが，ふと頭上を見上げると......
+        </p>
+
+        <div class = "image-container">
+            <img src = "./image/hive.jpg" class = "content-img-tate">
+            <p>最悪</p>
+        </div>
+
+        <p class = "indent">
+            その後，K君の起床とともに移動する．今日も昨日とは別の場所でハンミョウとイズミヤマを狙っていく．
+        </p>
+
+        <p class = "indent">
+            着いたところで，まずはオオバヤシャブシを見回る．やはり見当たらない．見つけられていないのかいないのか，よく分からないが......　成果の出ない採集の辛いところだ．
+        </p>
+        <p class = "indent">
+            何もない木を眺め続けるイメージが湧いてきたところで，ハンミョウ狙いに移動する．コニワハンミョウこそ見つかるものの，カワラハンミョウは見当たらない......分布が局所的なのだろうか．砂漠の中を数km歩いたが，それらしきものは見当たらなかった．
+        </p>
+        <p class = "indent">
+            せっかくなので島を一周することにした．伊豆大島一周道路にしたがってぐるりと回って宿まで帰る．
+        </p>
+
+        <div class = "image-container">
+            <img src = "./image/fudeshima.jpg" class = "content-img-yoko">
+            <p>筆島．左側に海食洞が見える</p>
+        </div>
+
+        <div class = "image-container">
+            <img src = "./image/kudatch.jpg" class = "content-img-yoko">
+            <p>謎の地名</p>
+        </div>
+
+        <div class = "image-container">
+            <img src = "./image/nawakiri.jpg" class = "content-img-yoko">
+            <p>謎の魚．オキサワラらしい．脂が乗っていておいしい</p>
+        </div>
+
+        <p class = "indent">
+            一周の後，オオヒョウタンのトラップを確認しに行く．すると......
+        </p>
+
+        <div class = "image-container">
+            <img src = "./image/hyotan.jpg" class = "content-img-tate">
+            <p>オオヒョウタンの鞘翅．デカい</p>
+        </div>
+
+        <p class = "indent">
+            またもやターゲットの残骸に遭遇する．死骸との縁が強い遠征だ．因みにトラップにはゴマ粒のようなゴミダマ以外何も来ていなかった......
+        </p>
+
+        <p class = "indent">
+            「ショッピングセンター べにや」でテキトーに食べ物を見繕い，夜の採集に出撃する．ここは『ビビッドレッド・オペレーション』の聖地らしく，野生の神絵が並べられていた．
+        </p>
+        <div class = "image-container">
+            <img src = "./image/esaki.jpg" class = "content-img-tate">
+            <p>エサキモンツノカメムシ．ハートの模様がかわいい</p>
+        </div>
+        <p class = "indent">
+            オオヒョウタンの砂浜付近の街灯を探したり，昨夜の街灯を回ったりしたが，特に見るべき成果は得られなかった．イズミヤマ，無理じゃないか？　4日目に続く．
+        </p>
+    
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const currentArticleId = parseInt(document.body.getAttribute('data-article-id'), 10);
+            const n = parseInt(document.body.getAttribute('number-of-article'), 10);
+            const previousArticleId = currentArticleId - 1;
+            const nextArticleId = currentArticleId + 1;
+
+            const linkContainer = document.createElement('div');
+            linkContainer.className = 'link-container';
+
+            if (nextArticleId <= n){
+                const nextLink = document.createElement('a');
+                nextLink.href = `../${nextArticleId}/article.html`;
+                nextLink.innerText = '次へ';
+                nextLink.className = 'next-link';
+                linkContainer.appendChild(nextLink);
+            }
+            else{
+                const nextLink = document.createElement('a');
+                nextLink.href = `../../index.html`;
+                nextLink.innerText = 'ブログトップに戻る';
+                nextLink.className = 'next-link';
+                linkContainer.appendChild(nextLink);
+            }
+        
+            if (previousArticleId > 0) {
+                const prevLink = document.createElement('a');
+                prevLink.href = `../${previousArticleId}/article.html`;
+                prevLink.innerText = '前へ';
+                prevLink.className = 'prev-link';
+                linkContainer.appendChild(prevLink);
+            }
+      
+        document.body.appendChild(linkContainer);
+        });
+    </script>
+
+</body>
+</html>

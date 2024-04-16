@@ -1,0 +1,172 @@
+header.top {
+    width: 100%; /* 横幅をビューポートの100%に設定 */
+    height: 20vw; /* 縦の高さをビューポート幅の33.33%に設定し、縦1:横3の比率を実現 */
+    background-image: url(../../image/header.png);
+    background-position: center center; /* 画像を中央に配置 */
+    background-repeat: no-repeat;
+    background-size: cover; /* 背景画像をコンテナにフィットさせる */
+  }
+  
+  /* リンクをブロックレベル要素として扱う */
+  header.top a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none; /* リンクの下線を除去 */
+  }
+  
+  
+  .menubar{
+    width:100%;
+    position:sticky;
+    top:0;
+    z-index: 1000;
+  }
+  
+  ul.ddmenu{
+    display: flex;
+    margin:0px;
+    padding: 0px 0px 0px 0px;
+    background-color: #00AE37;
+  }
+  
+  ul.ddmenu li{
+    width: calc(100% / 2);
+    display: inline-block;
+    list-style-type: none;
+    position: relative;
+  }
+  
+  ul.ddmenu a{
+    font-size: 16px;
+    background-color: #3cb362;
+    color: #ffffff;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    border: 1px solid white;
+  }
+  
+  ul.ddmenu a:hover{
+    background-color: #307e49;
+    color: #ffffff;
+  }
+  
+  ul.ddmenu ul li {
+    width: 100%; /* サブメニュー項目の幅を親に合わせる */
+  }
+  
+  ul.ddmenu ul {
+    display: none; /* ホバーするまで非表示 */
+    position: absolute;
+    left: 0;
+    background-color: #3cb362; /* サブメニューの背景色 */
+    padding: 0;
+    margin: 0;
+    width: 100%; /* サブメニューの幅をメインメニュー項目の幅に合わせる */
+    box-sizing: border-box; /* パディングとボーダーを幅に含める */
+  }
+  
+  ul.ddmenu li:hover ul{
+    display: block;
+  }
+  
+  .lin{
+    font-size:16px;
+    text-decoration:through;
+  }
+  
+  
+  body {
+    background-color: #ecffed; /* 薄い青色 */
+  }
+  .content {
+    font-size: 16px; /* 文字サイズを32pxに設定 */
+    margin: 5% 10% 5% 10%; /* 上右下左 */
+    padding: 20px; /* 内側の余白を設定 */
+    background-color: #ffffff; /* クリーム色 */
+    border: 1px solid #a7ffc3;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  p.indent{
+    text-indent: 1em;
+  }
+  
+  .footer {
+    background-color: #333; /* フッターの背景色 */
+    color: #fff; /* フッター内のテキスト色 */
+    text-align: center; /* テキストを中央揃えに */
+    padding: 20px 0; /* 上下にパディングを追加 */
+    font-size: 16px; /* フォントサイズの設定 */
+  }
+  .image-container {
+    display: flex;
+    justify-content: center; /* 水平方向の中央揃え */
+    align-items: center; /* 垂直方向の中央揃え */
+  }
+  .content-img {
+    width: 60%;
+    height: auto; /* 画像のアスペクト比を保持 */
+    display: block; /* 画像をブロック要素として表示 */
+    margin: 10px; /* すべての方向に10pxのマージンを適用 */
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevents overflow of the image outside the grid item */
+  }
+  
+  .grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover ensures the image fills the grid item, cropping if necessary */
+  }
+  .grid-item:hover {
+    transform: scale(1.05);
+  }
+  .row1 {
+    grid-column: 1; /* 3列目に配置 */
+  }
+  
+  .row2 {
+    grid-column: 2; /* 1列目に配置 */
+  }
+
+  .article-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5%;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin: 5% 10% 5% 10%; /* 上右下左 */
+    padding: 20px; /* 内側の余白を設定 */
+    background-color: #ffffff; /* クリーム色 */
+    border: 1px solid #a7ffc3;
+}
+
+.article-image{
+    width: 30%;
+    height: auto;
+}
+
+.article-title{
+    font-size: 20px;
+}
+
+.article-text {
+    flex-grow: 1;             /* 残りのスペースをテキストで埋める */
+}
+.article-title{
+    font-size: 30px;
+    text-align: center;
+}

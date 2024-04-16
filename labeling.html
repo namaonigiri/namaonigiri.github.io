@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ラベル作成補助ツール</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <style>
+        /* ビューポート全体にマップを表示するスタイル */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        #mapid {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="mapid"></div>
+    <script>
+        // 〒を
+        function removePostalCode(locationName){
+            var postalCodePattern = /\d{3}-\d{4}, /;
+            return locationName.replace(postalCodePattern, '').trim();
+        }
+        // 初期位置を奈良県庁に設定　[(北緯), (東経)]を設定することで初期位置を変更できる．
+        var map = L.map('mapid').setView([34.6855403,135.8307141], 13);
+
+        // 地理院地図のタイルレイヤーを追加
+        L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', {
+            attribution: "&copy; <a href='https://maps.gsi.go.jp/development/ichiran.html'>国土地理院</a>"
+        }).addTo(map);
+
+        // マップクリックイベントの追加
+        map.on('click', function(e) {
+            // toFixed(n)で小数点以下の桁数を指定
+            var lat = parseFloat(e.latlng.lat.toFixed(6));
+            var lng = parseFloat(e.latlng.lng.toFixed(6));
+
+            // 標高情報の取得
+            fetch('https://cyberjapandata2.gsi.go.jp/general/dem/scripts/getelevation.php?lon=' + lng + '&lat=' + lat + '&outtype=JSON')
+            .then(response => response.json())
+            .then(elevationData => {
+                var elevation = elevationData.elevation ? elevationData.elevation + " m" : "不明";
+
+                // 逆ジオコーディングで地名の取得
+                fetch('https://nominatim.openstreetmap.org/reverse?format=json&lat=' + lat + '&lon=' + lng)
+                .then(response => response.json())
+                .then(locationData => {
+                    var locationName = locationData.display_name ? locationData.display_name : "不明";
+                    // 〒の除去．多分ないけど，○○○-○○○○みたいな地名があってこれが悪さをするときはここをコメントアウトして．
+                    locationName = removePostalCode(locationName);
+                    // ここが出力に関わる部分．ラベルづけが気になる場合はここを書き換えてみて．
+                    alert(locationName + ", (alt. " + elevation + "), " + lat + "°N, " + lng + "°E");
+                });
+            })
+            .catch(error => console.log('Error:', error));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!--
+    ・css
+    ・ヘッダ画像
+    ・ホームリンク
+    ・作品トップリンク
+    ・イラストリンク
+    ・ゲームリンク
+    ・ブログトップリンク
+    を適宜変更する．
+-->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" href = "./css/toolstyle.css" type = "text/css">
+    <title>
+        Macroculus spp.
+    </title>
+</head>
+<header class="top" style="background-image: url('../../image/header.png');">
+    <a href="../index.html" aria-label="ホームへ">
+        <!-- リンクの中にテキストや他の要素が必要な場合はここに記述 -->
+        <!-- aria-labelは、リンクの目的を視覚的に示さない時のための補助 -->
+    </a>
+</header>
+<div class = "menubar">
+    <ul class="ddmenu">
+        <li><a href = "../index.html">作品</a>
+            <ul>
+                <li><a href = "../graphic/article.html">イラスト</a></li>
+                <li><a href = "../game/game.html">ゲーム</a></li>
+                <li><a href = "./article.html">ツール</a></li>
+            </ul>
+        </li>
+        <li><a href = "../../blog/index.html">ブログ</a></li>
+    </ul>
+</div>
+
+<body>
+    <div class = "article-container">
+        <img src = "./image/labeling.jpg" class ="article-image">
+        <div class = "text">
+            <div class = "article-title">
+                ラベリング補助ツール
+            </div>
+            <p class = "indent">
+                友人から，「地理院地図上で採集ポイントをクリックすると，標高や緯度経度などの昆虫標本のラベルづけに必要なデータが出てくるアプリが欲しい」と言われて制作したもの．Leafletを用い，地理院地図のタイルレイヤを表示している．
+            </p>
+        </div>
+    </div>
+</body>
+</html>

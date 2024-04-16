@@ -1,0 +1,141 @@
+<!--
+    ・css
+    ・ヘッダ画像
+    ・ホームリンク
+    ・作品トップリンク
+    ・イラストリンク
+    ・ゲームリンク
+    ・ブログトップリンク
+    を適宜変更する．
+-->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" href = "../../css/blogstyle.css" type = "text/css">
+    <title>
+        Macroculus spp.
+    </title>
+</head>
+<header class="top" style="background-image: url('../../../image/header.png');">
+    <a href="../../../index.html" aria-label="ホームへ">
+        <!-- リンクの中にテキストや他の要素が必要な場合はここに記述 -->
+        <!-- aria-labelは、リンクの目的を視覚的に示さない時のための補助 -->
+    </a>
+</header>
+<div class = "menubar">
+    <ul class="ddmenu">
+        <li><a href = "../../../project/index.html">作品</a>
+            <ul>
+                <li><a href = "../../../project/graphic/article.html">イラスト</a></li>
+                <li><a href = "../../../project/game/game.html">ゲーム</a></li>
+                <li><a href = "../../../project/tool/article.html">ツール</a></li>
+            </ul>
+        </li>
+        <li><a href = "../../index.html">ブログ</a></li>
+    </ul>
+</div>
+
+<body data-article-id="2" number-of-article = "5">
+
+    <div class = "content">
+        <div class = "content-title">西表島遠征2021.10.30-11.04 2日目</div>
+        <p class = "indent">
+            秋の八重山には，表年と裏年がある．チャマルの生活環は 2 年で一回りするため，その周期によるものである．西表島では，奇数年が表で偶数年が裏である．
+            チャマルは昼行性，ヤエマルは夜行性である．したがって表年では，昼はチャマル，夜はヤエマルのハードスケジュールを強いられる．私も早起きして山歩きに向かった．
+        </p>
+        <p class= "indent">
+            昨夜歩いたのと同じ道を進む．昼なのに懐中電灯を照らしながら登っていると，視界に赤褐色の照り返しが映った．
+        </p>
+        <div class = "image-container">
+            <img src="./image/chamaru1031.png" class="content-img-tate">
+            <p>人生初マルバネ！！！！</p>
+        </div>
+        <p class= "indent">
+            唐突なことだった．すぐ目の前に，憧れた虫が鎮座していた．チャマルのメスである．震える手を抑えながら掴み上げる．鮮やかな体色が美しかった．
+        </p>
+        <p class= "indent">
+            その後も期待して 3 時間ほど彷徨ったものの，残念ながら追加は得られなかった (クソ雑魚)．
+        </p>
+
+        <div class = "image-container">
+            <img src="./image/taiwanhigurashi.png" class="content-img-tate">
+            <p>タイワンヒグラシ</p>
+        </div>
+
+        <div class = "image-container">
+            <img src="./image/kinoboritokage.png" class="content-img-tate">
+            <p>キノボリトカゲ</p>
+        </div>
+
+        <div class = "image-container">
+            <img src="./image/hanmyou.png" class="content-img-tate">
+            <p>タイワンヤツボシハンミョウ</p>
+        </div>
+
+        <div class = "image-container">
+            <img src="./image/moribatta.png" class="content-img-tate">
+            <p>イリオモテモリバッタ</p>
+        </div>
+
+        <p class= "indent">
+            この日は西表島唯一の寿司屋を予約していたので，夜の採集はお休み．食は旅の醍醐味のひとつである．港から 5km．脚の酷使が続く．バスを使えば良かったのに．
+            因みに帰りは親切な観光客の方に送ってもらった．このときはヒッチハイクという概念が頭になかったものだなあ．
+        </p>
+
+        <p class = "indent">
+            向かったのは島北西部にある「島魚料理　初枝」さん．
+        </p>
+        <div class = "image-container">
+            <img src="./image/sushi1.png" class="content-img-yoko">
+            <img src="./image/sushi2.png" class="content-img-yoko">
+            <p>聞いたことのない名前のネタを片っ端から頼む．</p>
+        </div>
+
+        <p class = "indent">
+            見れば，窓の外は大荒れ．ここへ来るのは今日で良かったかもしれない，と思いつつ箸を進める．ネタの肉質ごとに調理方法が異なり，丁寧な味づくりが印象的だった．
+            まだヤエマルを 1 匹も採れていないのに，早くも 1 ターン休み．こいつはやる気があるのだろうか．3 日目に続く．
+        </p>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const currentArticleId = parseInt(document.body.getAttribute('data-article-id'), 10);
+            const n = parseInt(document.body.getAttribute('number-of-article'), 10);
+            const previousArticleId = currentArticleId - 1;
+            const nextArticleId = currentArticleId + 1;
+
+            const linkContainer = document.createElement('div');
+            linkContainer.className = 'link-container';
+
+            if (nextArticleId <= n){
+                const nextLink = document.createElement('a');
+                nextLink.href = `../${nextArticleId}/article.html`;
+                nextLink.innerText = '次へ';
+                nextLink.className = 'next-link';
+                linkContainer.appendChild(nextLink);
+            }
+            else{
+                const nextLink = document.createElement('a');
+                nextLink.href = `../../index.html`;
+                nextLink.innerText = 'ブログトップに戻る';
+                nextLink.className = 'next-link';
+                linkContainer.appendChild(nextLink);
+            }
+        
+            if (previousArticleId > 0) {
+                const prevLink = document.createElement('a');
+                prevLink.href = `../${previousArticleId}/article.html`;
+                prevLink.innerText = '前へ';
+                prevLink.className = 'prev-link';
+                linkContainer.appendChild(prevLink);
+            }
+      
+        document.body.appendChild(linkContainer);
+        });
+    </script>
+
+</body>
+</html>

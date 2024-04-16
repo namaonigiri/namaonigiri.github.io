@@ -1,0 +1,119 @@
+<!--
+    ・css
+    ・ヘッダ画像
+    ・ホームリンク
+    ・作品トップリンク
+    ・イラストリンク
+    ・ゲームリンク
+    ・ブログトップリンク
+    を適宜変更する．
+-->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" href = "../../css/blogstyle.css" type = "text/css">
+    <title>
+        Macroculus spp.
+    </title>
+</head>
+<header class="top" style="background-image: url('../../../image/header.png');">
+    <a href="../../../index.html" aria-label="ホームへ">
+        <!-- リンクの中にテキストや他の要素が必要な場合はここに記述 -->
+        <!-- aria-labelは、リンクの目的を視覚的に示さない時のための補助 -->
+    </a>
+</header>
+<div class = "menubar">
+    <ul class="ddmenu">
+        <li><a href = "../../../project/index.html">作品</a>
+            <ul>
+                <li><a href = "../../../project/graphic/article.html">イラスト</a></li>
+                <li><a href = "../../../project/game/game.html">ゲーム</a></li>
+                <li><a href = "../../../project/tool/article.html">ツール</a></li>
+            </ul>
+        </li>
+        <li><a href = "../../index.html">ブログ</a></li>
+    </ul>
+</div>
+
+<body data-article-id="4" number-of-article = "5">
+    <div class = "content">
+        <div class = "content-title">西表島遠征2021.10.30-11.04 4日目</div>
+        <p class = "indent">
+            さて，この日も朝早くから起床し，早々に山へ向かう．遠征において時間はごくごく限られている．その中でどれだけ頑張れるか，というのが成果に直結してくるものだ．なお，私の場合は採集能力で割り引かれている．
+        </p>
+
+        <div class = "image-container">
+            <img src = "./image/oogomadara.jpg" class = "content-img-tate">
+            <p>オオゴマダラ．黄金の蛹で有名</p>
+        </div>
+
+        <div class = "image-container">
+            <img src = "./image/tonbo.jpg" class = "content-img-yoko">
+            <p>トンボの一種．未同定 (またの名を実力不足)</p>
+        </div>
+
+
+        <p class = "indent">
+            この日は山籠もり作戦を実行することにした．その名の通り，朝から晩までひたすら山を歩いて探し続ける作戦である．これまでは一度宿に戻っていたが，私は徒歩なのでそれでは時間と体力を消耗してしまう．
+            それならいっそのことずっと採集し続ければいいじゃないか，というバカの考えである．
+        </p>
+        <p class = "indent">
+            食事はと言えば，この遠征のために買い溜めたカロリーメイトとインゼリーである．外食はどうしても高くつくので，我々貧乏採集人はレトルト食品で済ませるのが鉄則．ステーキ？　寿司？　......はてさて，なんのことやら．
+        </p>
+        <p class = "indent">
+            山籠もり中，女性二人組にであった．なんでも個人で入山したはいいが，目的地へたどり着けないらしい．私はこの山を歩き回ってもう 4 日目だ．どうせ行く当てもないのだし，案内を快諾する．愉快な人たちであった．
+            その人たちと帰る途中，チャマルメスを 1 匹追加した．
+        </p>
+        <p class = "indent">
+            適宜栄養補給しつつ籠山する．日が落ちてきたところで，ヤエマルに移る．
+        </p>
+        <div class = "image-container">
+            <img src = "./image/hakogame.jpg" class = "content-img-tate">
+            <p>セマルハコガメ．こちらは国の天然記念物で採集禁止</p>
+        </div>
+        <p class = "indent">
+            ......はずだったのだが，やる気が起きない．どうやら疲れ果ててしまったようである．思えばもう 9 時間ほどぐるぐると彷徨っている．この日は早々に諦めてしまった．それにしても，そんなに歩いて 1 匹とは，もう少し何とかならなかったのだろうか．もう二度と籠山はしない．そう心に誓ったのであった．5 日目に続く．
+        </p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const currentArticleId = parseInt(document.body.getAttribute('data-article-id'), 10);
+            const n = parseInt(document.body.getAttribute('number-of-article'), 10);
+            const previousArticleId = currentArticleId - 1;
+            const nextArticleId = currentArticleId + 1;
+
+            const linkContainer = document.createElement('div');
+            linkContainer.className = 'link-container';
+
+            if (nextArticleId <= n){
+                const nextLink = document.createElement('a');
+                nextLink.href = `../${nextArticleId}/article.html`;
+                nextLink.innerText = '次へ';
+                nextLink.className = 'next-link';
+                linkContainer.appendChild(nextLink);
+            }
+            else{
+                const nextLink = document.createElement('a');
+                nextLink.href = `../../index.html`;
+                nextLink.innerText = 'ブログトップに戻る';
+                nextLink.className = 'next-link';
+                linkContainer.appendChild(nextLink);
+            }
+        
+            if (previousArticleId > 0) {
+                const prevLink = document.createElement('a');
+                prevLink.href = `../${previousArticleId}/article.html`;
+                prevLink.innerText = '前へ';
+                prevLink.className = 'prev-link';
+                linkContainer.appendChild(prevLink);
+            }
+      
+        document.body.appendChild(linkContainer);
+        });
+    </script>
+
+</body>
+</html>
