@@ -170,3 +170,7 @@ header.top {
     font-size: 30px;
     text-align: center;
 }
+.article-link {
+  text-decoration: none;  /* リンクの下線を除去 */
+  color: inherit;         /* リンクの色を親要素から継承 */
+}
